@@ -1,0 +1,45 @@
+.hide .f-action {
+    transform: translate3d(0, 100%, 0);
+}
+.show .f-action {
+    transform: translate3d(0, 0, 0);
+}
+.show .f-mask {
+    display: block;
+}
+.hide .f-mask {
+    display: none;
+}
+.f-mask {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+    transition: all .6s .6s;
+}
+.f-action {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transition: all .6s;
+    background: #fff;
+}
+.f-action-title,
+.f-action-item {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+}
+.f-action-item:last-child {
+    border-bottom: 3px solid #eee;
+}
+.f-action-cancel {
+    height: 40px;
+    line-height: 40px;
+}

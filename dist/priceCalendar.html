@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/priceCalendar/priceCalendar.css">
+</head>
+
+<body>
+    <div class="start">出发日期</div>
+    <div class="test"></div>
+    <script src="js/rem.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.js"></script>
+    <script src="js/priceCalendar/datePicker.js"></script>
+</body>
+<script type="text/javascript">
+    $('.test').datePicker();
+    $('.start').click(function() {
+        $('.datePicker-wrapper').show();
+    })
+</script>
+
+</html>
