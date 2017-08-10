@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>机场城市</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/assets/font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/cityList/cityList.min.css">
+</head>
+
+<body>
+    <div class="test">测试</div>
+    <script src="dist/js/rem.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.js"></script>
+    <script src="dist/js/cityList/cityData.min.js"></script>
+    <script src="dist/js/cityList/cityList.min.js"></script>
+</body>
+<script type="text/javascript">
+    $('.test').cityList({
+        hotCity: ['长沙', '株洲'],
+        location: '长沙',
+        showLetter: true,
+        callBack: function(a, b) {
+            alert(a)
+            alert(b)
+        }
+    })
+</script>
+
+</html>

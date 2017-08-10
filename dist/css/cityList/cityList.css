@@ -107,13 +107,16 @@ a {
   z-index: 99;
   right: 0;
   top: 90px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 40px;
   min-height: -webkit-calc(100% - 90px);
   text-align: center;
   font-size: 14px; }
   .letter li {
+    -ms-flex: 1;
     flex: 1; }
     .letter li a {
       display: block;
@@ -180,7 +183,9 @@ a {
   margin-top: 5px; }
 
 .city-header {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -201,6 +206,7 @@ a {
     line-height: .55rem;
     text-align: center; }
   .city-header .input-search {
+    -ms-flex: 1;
     flex: 1;
     height: 0.55rem;
     line-height: 0.55rem;
