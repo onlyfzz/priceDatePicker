@@ -21,4 +21,5 @@ $('.start').click(function() {
 3. showHoliday: true,  // 显示节日
 4. showVacation: true, // 显示假期
 5. monthNum: 7         // 显示多少个月
+
 ![cityList](https://github.com/onlyfzz/sell/raw/master/price.png)
