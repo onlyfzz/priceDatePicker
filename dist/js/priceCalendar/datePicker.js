@@ -107,7 +107,7 @@
                 if (element.month == 2) {
                     break;
                 } else if (element.month == 12) {
-                    html += '<li class="noPick" data-date="' + monthData.year + '-' + month + '-' + date + '"></li>';
+                    html += '<li class="noPick" data-date="' + (monthData.year - 1) + '-' + month + '-' + date + '"></li>';
                 } else {
                     html += '<li data-date="' + monthData.year + '-' + month + '-' + date + '">' +
                         '<em>' + element.showDate + '</em><i></i></li>';
