@@ -100,20 +100,27 @@
             if (date < 10) {
                 date = '0' + date;
             }
-            if (element.month == monthData.month && (new Date().getDate() > element.showDate) && (new Date().getMonth() + 1 == monthData.month)) {
+            if (monthData.year == new Date().getFullYear() && element.month == monthData.month && (new Date().getDate() > element.showDate) && (new Date().getMonth() + 1 == monthData.month)) {
                 html += '<li class="noPick" data-date="' + monthData.year + '-' + month + '-' + date + '">' +
                     '<em>' + element.showDate + '</em><i></i></li>';
-            } else if (element.month > monthData.month) {
-                break;
-            } else if (element.month < monthData.month) {
-                html += '<li class="noPick" data-date="' + monthData.year + '-' + month + '-' + date + '"></li>';
+            } else if (monthData.month == 1) {
+                if (element.month == 2) {
+                    break;
+                } else if (element.month == 12) {
+                    html += '<li class="noPick" data-date="' + monthData.year + '-' + month + '-' + date + '"></li>';
+                } else {
+                    html += '<li data-date="' + monthData.year + '-' + month + '-' + date + '">' +
+                        '<em>' + element.showDate + '</em><i></i></li>';
+                }
             } else {
-                html += '<li data-date="' + monthData.year + '-' + month + '-' + date + '">' +
-                    '<em>' + element.showDate + '</em><i></i></li>';
-            }
-
-            if (i % 7 === 6) {
-                // html += '</tr>';
+                if (element.month > monthData.month) {
+                    break;
+                } else if (element.month < monthData.month) {
+                    html += '<li class="noPick" data-date="' + monthData.year + '-' + month + '-' + date + '"></li>';
+                } else {
+                    html += '<li data-date="' + monthData.year + '-' + month + '-' + date + '">' +
+                        '<em>' + element.showDate + '</em><i></i></li>';
+                }
             }
         }
 
